@@ -15,6 +15,7 @@ public class StockInventorySalesApplication {
     private SalesRepository salesRepository;
 
     public static void main(String[] args) {
+    System.out.println("app started");
         SpringApplication.run(StockInventorySalesApplication.class, args);
     }
 
