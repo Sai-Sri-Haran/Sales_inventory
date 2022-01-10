@@ -44,12 +44,12 @@ public class ProductService  {
         return  new CustomResponse(true,200,"Updated Successfully",sample);
     }
 
-    public Object getProductbyname(String product_name) {
-
-        Product sample= productRepository.findByProduct_name(product_name);
-        if (sample==null){
-            return  new CustomResponse(false,500,"Product with this Name Not found",null);
-        }
-        return  new CustomResponse(true,200,"Updated Successfully",sample);
-    }
+//    public Object getProductbyname(String product_name) {
+//
+//        Product sample= productRepository.findByProductName(product_name);
+//        if (sample==null){
+//            return  new CustomResponse(false,500,"Product with this Name Not found",null);
+//        }
+//        return  new CustomResponse(true,200,"Updated Successfully",sample);
+//    }
 }

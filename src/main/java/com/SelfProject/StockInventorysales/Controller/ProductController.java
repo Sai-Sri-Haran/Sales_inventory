@@ -26,8 +26,9 @@ public class ProductController {
     public ResponseEntity<?> getproductbyid(@PathVariable int id) throws Exception{
         return new ResponseEntity<>(productService.getProductbyid(id), HttpStatus.OK);
     }
-    @GetMapping("/getbyname/{product_name}")
-    public ResponseEntity<Object> getproductbyname(@PathVariable String product_name ){
-        return new ResponseEntity<>(productService.getProductbyname(product_name), HttpStatus.OK);
-    }
+
+//    @GetMapping("/getbyname/{product_name}")
+//    public ResponseEntity<Object> getproductbyname(@PathVariable String product_name ){
+//        return new ResponseEntity<>(productService.getProductbyname(product_name), HttpStatus.OK);
+//    }
 }

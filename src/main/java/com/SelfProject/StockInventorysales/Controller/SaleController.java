@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/sales")
 public class SaleController {
@@ -41,5 +43,10 @@ public class SaleController {
     @GetMapping("/getbyname/{customername}")
     public  ResponseEntity<Object> getbyname(@PathVariable String customername){
         return  new ResponseEntity<>(salesService.getbyname(customername), HttpStatus.OK);
+    }
+
+    @GetMapping("/getall")
+    public List<?> getall(){
+        return salesRepository.findAll();
     }
 }

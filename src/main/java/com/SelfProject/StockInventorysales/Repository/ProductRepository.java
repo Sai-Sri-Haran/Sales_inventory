@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ProductRepository extends JpaRepository<Product,Integer> {
     Product findByProductid(int productid);
 
-    Product findByProduct_name(String product_name);
+//    Product findByProductName(String product_name);
 }

@@ -22,7 +22,7 @@ public class Sales {
     private  int billno;
     private String customername;
 
-    @OneToMany(targetEntity=Productsale.class,fetch = FetchType.EAGER, cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(targetEntity=Productsale.class,fetch = FetchType.LAZY, cascade = CascadeType.ALL,orphanRemoval = true)
     @JoinColumn(name="billno",referencedColumnName = "billno")
     private List<Productsale> productsales= new ArrayList<>();
 
